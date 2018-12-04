@@ -33,10 +33,11 @@ public class NameService {
 	public BabyName generate(NameRequest nameRequest) {
 		HttpEntity<NameRequest> request = new HttpEntity<>(nameRequest);
 		ResponseEntity<BabyName> response = restTemplate.exchange(NameGenURL, HttpMethod.POST, request, BabyName.class);
-		if (response.getBody().isName()) {
-			persist(response.getBody());
+		BabyName newName = response.getBody();
+		if (newName.isWorkingName()) {
+			persist(newName);
 		}
-		return response.getBody();
+		return newName;
 	}
 
 	private void persist(BabyName babyName) {

@@ -2,7 +2,7 @@ package syn.ana.persistence.domain;
 
 public class QueueRequest {
 
-	private int nameID;
+	private long nameID;
 	private String name;
 	private requestType type;
 
@@ -19,22 +19,22 @@ public class QueueRequest {
 		this.setType(type);
 	}
 
-	public QueueRequest(int id, requestType type) {
+	public QueueRequest(long id, requestType type) {
 		this.setNameID(id);
 		this.setType(type);
 	}
 
-	public QueueRequest(int id, String name, requestType type) {
+	public QueueRequest(long id, String name, requestType type) {
 		this.setNameID(id);
 		this.setName(name);
 		this.setType(type);
 	}
 
-	public int getNameID() {
+	public long getNameID() {
 		return nameID;
 	}
 
-	public void setNameID(int nameID) {
+	public void setNameID(long nameID) {
 		this.nameID = nameID;
 	}
 

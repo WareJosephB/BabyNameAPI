@@ -2,14 +2,14 @@ package syn.ana.persistence.domain;
 
 public class NameRequest {
 
-	private int length;
+	private long length;
 	private String beginning;
 
 	public NameRequest() {
 
 	}
 
-	public NameRequest(int length) {
+	public NameRequest(long length) {
 		this.length = length;
 		this.beginning = "";
 	}
@@ -19,11 +19,11 @@ public class NameRequest {
 		this.beginning = beginning;
 	}
 
-	public int getLength() {
+	public long getLength() {
 		return length;
 	}
 
-	public void setLength(int length) {
+	public void setLength(long length) {
 		this.length = length;
 	}
 

@@ -12,7 +12,7 @@ public class BabyName {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String name;
-	private boolean isName;
+	private boolean workingName;
 
 	public String getName() {
 		return name;
@@ -21,13 +21,13 @@ public class BabyName {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public boolean isName() {
-		return isName;
+	
+	public boolean isWorkingName() {
+		return this.workingName;
 	}
-
-	public void setName(boolean isName) {
-		this.isName = isName;
+	
+	public void setWorkingName(boolean workingName) {
+		this.workingName = workingName;
 	}
 
 }
